@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      ShopWave - Your Ultimate Online Shopping Destination 🌟 Find, Click, Shop
+      – Effortless Retail Therapy!
+    </title>
+    <meta name="title" content="ShopWave" />
+    <meta
+      name="description"
+      content="Your Ultimate Online Shopping Destination 🌟 Find, Click, Shop – Effortless Retail Therapy!"
+    />
+    <!-- Favicon  -->
+    <!-- https://favicon.io -->
+    <link rel="icon" sizes="192x192" href="./assets/favicons/icon.png" />
+    <!-- Apple Touch Icon (reuse 192px icon.png) -->
+    <link rel="apple-touch-icon" href="./assets/favicons/icon.png" />
+    <!-- Safari Pinned Tab Icon -->
+    <link rel="mask-icon" href="./assets/favicons/icon.svg" color="blue" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Link to an external CSS file -->
+    <link rel="stylesheet" href="../dist/style.css" />
+  </head>
+
+  <body class="font-montserrat text-blackish">
+    <header class="bg-whitish">
+      <div class="navbar px-8 md:px-14 lg:px-24 justify-center">
+        <div class="md:flex-1">
+          <a href="./main.html"
+            ><img
+              class="w-40 md:w-52"
+              src="./assets/logo/logo.png"
+              alt="shopwave"
+          /></a>
+        </div>
+        <div class="flex gap-2">
+          <div class="hidden md:flex">
+            <input
+              type="text"
+              placeholder="Search in Shopwave"
+              class="input lg:w-[50rem] h-10 rounded-lg bg-white rounded-r-none placeholder:text-gray-600 focus:outline-none border-gray-200 border"
+            />
+            <button
+              class="btn border-none text-white bg-main min-h-[2.5rem] h-10 rounded-l-none hover:bg-demain capitalize"
+            >
+              <i class="fa-solid fa-magnifying-glass text-white"></i>
+              <!-- Search -->
+            </button>
+          </div>
+          <div class="cursor-pointer mx-3 hidden md:block">
+            <img src="./assets/img/cart.svg" class="w-10 hover:fill-main" />
+          </div>
+          <div class="dropdown dropdown-end hidden md:block">
+            <label tabindex="0" class="btn btn-circle avatar hover:border-none">
+              <div class="w-10 rounded-full">
+                <img src="./assets/img/user.png" />
+              </div>
+            </label>
+            <ul
+              tabindex="0"
+              class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-white rounded-box w-fit"
+            >
+              <li>
+                <a href="https://github.com/devbytemehedi" target="_blank"
+                  ><i class="fa-solid fa-user text-gray-700"></i> Profile</a
+                >
+              </li>
+              <li>
+                <a><i class="fa-solid fa-gear text-gray-700"></i> Settings</a>
+              </li>
+              <li>
+                <a
+                  ><i class="fa-solid fa-right-from-bracket text-gray-700"></i>
+                  Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center items-center mb-5 md:hidden">
+        <input
+          type="text"
+          placeholder="Search in Shopwave"
+          class="input w-3/4 h-10 rounded-lg bg-white rounded-r-none placeholder:text-gray-600 focus:outline-none border-gray-200 border"
+        />
+        <button
+          class="btn border-none text-white bg-main min-h-[2.5rem] h-10 rounded-l-none hover:bg-demain capitalize"
+        >
+          <i class="fa-solid fa-magnifying-glass text-white"></i>
+          <!-- Search -->
+        </button>
+      </div>
+      <div
+        class="banner bg-[#55608015] px-8 md:px-14 lg:px-24 flex items-center md:justify-between lg:justify-center py-10"
+      >
+        <div class="banner-text text-center w-fit">
+          <h3 class="font-medium text-xl md:text-2xl lg:text-3xl">
+            ---SALE FEVER---
+          </h3>
+          <h1 class="font-bold text-3xl md:text-4xl lg:text-6xl my-5">
+            Purchase TK 200 or above &amp; get
+            <span class="text-main">20% off</span>
+          </h1>
+          <div class="coupon flex gap-2 items-center justify-center">
+            <p class="font-medium md:text-2xl">Use Promo Code</p>
+            <button
+              id="coupon-code"
+              class="btn bg-main border-none rounded-lg text-white min-h-[2.5rem] h-10 hover:bg-demain"
+            >
+              SELL200
+            </button>
+          </div>
+        </div>
+        <div class="bnner-img hidden md:block">
+          <img src="./assets/img/banner-img.png" alt="banner-img" />
+        </div>
+      </div>
+    </header>
+    <main class="px-8 md:px-14 lg:px-24 bg-whitish lg:flex gap-10">
+      <div class="cards py-14 lg:py-24">
+        <h3 class="font-semibold text-2xl md:text-4xl my-10">Kitchenware</h3>
+        <div
+          class="card-group grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
+          <!-- Card 1 -->
+          <div
+            id="cardOne"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
+            <figure
+              class="px-5 pt-10 pb-5 bg-grayish rounded-lg w-[215px] h-[210px]"
+            >
+              <img src="./assets/img/prod1.png" alt="item" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="mask mask-star-2 bg-main"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="mask mask-star-2 bg-main"
+                />
+              </div>
+              <h2 id="cardOne-Title" class="card-title">K. Accessories</h2>
+              <p class="text-xl opacity-50">
+                <span id="cardOne-Price" class="card-price">39.00</span> TK
+              </p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            id="cardTwo"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
+            <figure
+              class="px-5 pt-10 pb-5 bg-grayish rounded-lg w-[215px] h-[210px]"
+            >
+              <img src="./assets/img/prod2.png" alt="item" class="rounded-lg" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-main"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-main"
+                />
+              </div>
+              <h2 id="cardTwo-Title" class="card-title">K. Accessories</h2>
+              <p class="text-xl opacity-50">
+                <span id="cardTwo-Price" class="card-price">25.00</span> TK
+              </p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            id="cardThree"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
+            <figure
+              class="px-5 pt-10 pb-5 bg-grayish rounded-lg w-[215px] h-[210px]"
+            >
+              <img src="./assets/img/prod3.png" alt="item" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="mask mask-star-2 bg-main"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="mask mask-star-2 bg-main"
+                />
+              </div>
+              <h2 id="cardThree-Title" class="card-title">Home Cooker</h2>
+              <p class="text-xl opacity-50">
+                <span id="cardThree-Price" class="card-price">49.00</span> TK
+              </p>
+            </div>
+          </div>
+        </div>
+        <h3 class="font-semibold text-4xl my-10">Sportswear</h3>
+        <div
+          class="card-group grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
+          <!-- Card 4 -->
+          <div
+            id="cardFour"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
+            <figure
+              class="px-5 pt-10 pb-5 bg-grayish rounded-lg w-[215px] h-[210px]"
+            >
+              <img src="./assets/img/prod4.png" alt="item" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-main"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-main"
+                />
+              </div>
+              <h2 id="cardFour-Title" class="card-title">Sports Back Cap</h2>
+              <p class="text-xl opacity-50">
+                <span id="cardFour-Price" class="card-price">49.00</span> TK
+              </p>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div
+            id="cardFive"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
+            <figure
+              class="px-5 pt-10 pb-5 bg-grayish rounded-lg w-[215px] h-[210px]"
+            >
+              <img src="./assets/img/prod5.png" alt="item" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-5"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-5"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-5"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-5"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-5"
+                  class="mask mask-star-2 bg-main"
+                  checked
+                />
+              </div>
+              <h2 id="cardFive-Title" class="card-title">Full Jersey Set</h2>
+              <p class="text-xl opacity-50">
+                <span id="cardFive-Price" class="card-price">69.00</span> TK
+              </p>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div
+            id="cardSix"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
+            <figure
+              class="px-5 pt-10 pb-5 bg-grayish rounded-lg w-[215px] h-[210px]"
+            >
+              <img src="./assets/img/prod6.png" alt="item" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-6"
+                  class="mask mask-star-2 bg-main"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-6"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-6"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-6"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-6"
+                  class="mask mask-star-2 bg-main"
+                />
+              </div>
+              <h2 id="cardSix-Title" class="card-title">Sports cates</h2>
+              <p class="text-xl opacity-50">
+                <span id="cardSix-Price" class="card-price">159.00</span> TK
+              </p>
+            </div>
+          </div>
+        </div>
+        <h3 class="font-semibold text-4xl my-10">Furniture</h3>
+        <div
+          class="card-group grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
+          <!-- Card 7 -->
+          <div
+            id="cardSeven"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
+            <figure
+              class="px-5 pt-10 pb-5 bg-grayish rounded-lg w-[215px] h-[210px]"
+            >
+              <img src="./assets/img/prod7.png" alt="item" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-7"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-7"
+                  class="mask mask-star-2 bg-main"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-7"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-7"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-7"
+                  class="mask mask-star-2 bg-main"
+                />
+              </div>
+              <h2 id="cardSeven-Title" class="card-title">
+                Single Relax Chair
+              </h2>
+              <p class="text-xl opacity-50">
+                <span id="cardSeven-Price" class="card-price">185.00</span> TK
+              </p>
+            </div>
+          </div>
+          <!-- Card 8 -->
+          <div
+            id="cardEight"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
+            <figure
+              class="px-5 pt-10 pb-5 bg-grayish rounded-lg w-[215px] h-[210px]"
+            >
+              <img src="./assets/img/prod8.png" alt="item" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-8"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  class="mask mask-star-2 bg-main"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  class="mask mask-star-2 bg-main"
+                />
+              </div>
+              <h2 id="cardEight-Title" class="card-title">Children play</h2>
+              <p class="text-xl opacity-50">
+                <span id="cardEight-Price" class="card-price">299.00</span> TK
+              </p>
+            </div>
+          </div>
+          <!-- Card 9 -->
+          <div
+            id="cardNine"
+            class="card w-fit shadow-xl bg-white p-10 pb-0 rounded-lg cursor-pointer card-item"
+          >
+            <figure
+              class="px-5 pt-10 pb-5 bg-grayish rounded-lg w-[215px] h-[210px]"
+            >
+              <img src="./assets/img/prod9.png" alt="item" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-9"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-9"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-9"
+                  class="mask mask-star-2 bg-main"
+                />
+                <input
+                  type="radio"
+                  name="rating-9"
+                  class="mask mask-star-2 bg-main"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-9"
+                  class="mask mask-star-2 bg-main"
+                />
+              </div>
+              <h2 id="cardNine-Title" class="card-title">Flexible Sofa</h2>
+              <p class="text-xl opacity-50">
+                <span id="cardNine-Price" class="card-price">339.00</span>0 TK
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cart py-10 lg:py-0 lg:mt-[13.6rem] bg-whitish rounded-lg">
+        <!-- Coupon -->
+        <div class="coupon p-5 mb-5 bg-white rounded-lg shadow-xl">
+          <h3 class="font-medium text-2xl my-3">Have coupon?</h3>
+          <div class="flex max-w-fit">
+            <input
+              id="input-coupon"
+              type="text"
+              placeholder="Coupon code"
+              class="input w-44 h-10 rounded-r-none bg-grayish focus:outline-none placeholder:text-gray-600"
+            />
+            <button
+              id="btn-coupon"
+              class="btn border-none text-white bg-main min-h-[2.5rem] h-10 rounded-l-none hover:bg-demain disabled:text-demain disabled:bg-[#e527b265]"
+              disabled
+            >
+              Apply
+            </button>
+          </div>
+        </div>
+        <!-- Checkout -->
+        <div
+          class="checkout p-5 bg-white rounded-lg grid grid-cols-1 shadow-xl w-fit"
+        >
+          <h3 class="font-medium text-2xl mb-3">
+            <img src="./assets/img/cart-fill.svg" class="inline" /> ShopList
+          </h3>
+          <ol id="item-list" class="list-inside list-decimal">
+            <!-- <li class="font-medium my-2">Home Cooker</li> -->
+          </ol>
+          <hr class="my-3" />
+          <p class="my-3 font-semibold" text-black>
+            Total Price:
+            <span id="total-price" class="opacity-50">00</span
+            ><span class="opacity-50"> TK</span>
+          </p>
+          <p class="my-3 font-semibold" text-black>
+            Discount:
+            <span id="discount" class="opacity-50">00</span
+            ><span class="opacity-50"> TK</span>
+          </p>
+          <p class="my-3 font-semibold" text-black>
+            Total:
+            <span id="total" class="opacity-50">00</span
+            ><span class="opacity-50"> TK</span>
+          </p>
+          <hr class="my-3 text-black" />
+          <button
+            id="btn-buy"
+            class="btn btn-wide bg-main border-none rounded-lg text-white min-h-[2.5rem] h-10 hover:bg-demain capitalize disabled:text-main disabled:opacity-50"
+            disabled
+          >
+            Make Purchase
+          </button>
+          <dialog id="purchase-modal" class="modal sm:modal-middle">
+            <form method="dialog" class="modal-box card bg-white">
+              <figure class="px-10 pt-10">
+                <img
+                  src="./assets/img/congo.png"
+                  alt="Shoes"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title font-bold lg:text-5xl text-3xl">
+                  Congratulations
+                </h2>
+                <p class="opacity-50 text-xl my-5">Your Purchase is complete</p>
+                <div class="card-actions">
+                  <button
+                    id="btn-home"
+                    class="btn bg-main border-none rounded-lg text-white min-h-[2.5rem] h-10 hover:bg-demain"
+                  >
+                    Go Home
+                  </button>
+                </div>
+              </div>
+            </form>
+          </dialog>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="footer px-24 p-10 bg-white text-blackish font-medium hidden lg:flex justify-between items-center"
+    >
+      <div>
+        <span class="footer-title">Services</span>
+        <a class="link link-hover hover:text-main">Branding</a>
+        <a class="link link-hover hover:text-main">Design</a>
+        <a class="link link-hover hover:text-main">Marketing</a>
+        <a class="link link-hover hover:text-main">Advertisement</a>
+      </div>
+      <div>
+        <span class="footer-title">Company</span>
+        <a class="link link-hover hover:text-main">About us</a>
+        <a class="link link-hover hover:text-main">Contact</a>
+        <a class="link link-hover hover:text-main">Jobs</a>
+        <a class="link link-hover hover:text-main">Press kit</a>
+      </div>
+      <div>
+        <span class="footer-title">Legal</span>
+        <a class="link link-hover hover:text-main">Terms of use</a>
+        <a class="link link-hover hover:text-main">Privacy policy</a>
+        <a class="link link-hover hover:text-main">Cookie policy</a>
+      </div>
+      <div>
+        <span class="footer-title">Newsletter</span>
+        <div class="form-control w-80">
+          <label class="label">
+            <span class="label-tex">Enter your email address</span>
+          </label>
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="shopwave@email.com"
+              class="input bg-whitish h-10 w-full pr-16 focus:outline-none border-gray-200 borde"
+            />
+            <button
+              class="btn bg-main border-none rounded-lg text-white min-h-[2.5rem] h-10 hover:bg-demain absolute top-0 right-0 rounded-l-none capitalize"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer
+      class="footer footer-center p-10 bg-blackish text-whitish flex flex-col lg:flex-row justify-between items-center px-8 md:px-14 lg:px-24"
+    >
+      <div>
+        <a href="./main.html"
+          ><img
+            class="w-40 md:w-52"
+            src="./assets/logo/logo.png"
+            alt="shopwave"
+        /></a>
+      </div>
+      <div>
+        <p class="font-medium text-md md:text-xl">
+          Copyright © 2023 - All right reserved
+        </p>
+      </div>
+      <div>
+        <div class="grid grid-flow-col gap-4">
+          <a href="#" class="fa-brands fa-facebook text-3xl lg:text-4xl"></a>
+          <a href="#" class="fa-brands fa-youtube text-3xl lg:text-4xl"></a>
+          <a href="#" class="fa-brands fa-twitter text-3xl lg:text-4xl"></a>
+          <a href="#" class="fa-brands fa-linkedin text-3xl lg:text-4xl"></a>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
